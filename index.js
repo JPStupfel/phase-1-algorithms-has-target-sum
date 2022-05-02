@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
+  for (let i = 0; i<array.length;i++){
+    for (j=i+1;j<array.length;j++){
+      console.log(i, j)
+      if (array[i] + array[j] === target){return true}
+    }
+  }
+return false
 }
 
 /* 
@@ -8,10 +15,22 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+
+  iterate through array
+
+  check element against rest of array for whether they sum the second arg
+
+  if so, break loop and return true
+
+  else at end return false
+
 */
 
 /*
   Add written explanation of your solution here
+
+  I am going to have to iterate through an array, and for each of those elements, check them against the remainder of the array to see if they add up to the functions second input.
+
 */
 
 // You can run `node index.js` to view these console logs
@@ -32,3 +51,7 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+
+
+
